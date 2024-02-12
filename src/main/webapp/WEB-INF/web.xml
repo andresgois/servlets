@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>Hello-world</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-  </welcome-file-list>
-  
-  <servlet>
-  	<servlet-name>agenda</servlet-name>
-  	<servlet-class>controller.AgendaController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>agenda</servlet-name>
-  	<url-pattern>/agenda</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>Hello-world</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>agenda</servlet-name>
+		<servlet-class>controller.AgendaController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>agenda</servlet-name>
+		<url-pattern>/agenda</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AppServlet</servlet-name>
+		<servlet-class>AppServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AppServlet</servlet-name>
+		<url-pattern>/teste2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>App</servlet-name>
+		<servlet-class>App</servlet-class>
+		<init-param>
+			<param-name>nome</param-name>
+			<param-value>andre</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>App</servlet-name>
+		<url-pattern>/app</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BaixaZip</servlet-name>
+		<servlet-class>BaixaZip</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BaixaZip</servlet-name>
+		<url-pattern>/baixar</url-pattern>
+	</servlet-mapping>
 </web-app>
